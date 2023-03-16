@@ -2,8 +2,8 @@
 Contributors: ucfwebcom
 Tags: ucf, rss, feed
 Requires at least: 4.7.3
-Tested up to: 5.3
-Stable tag: 1.0.2
+Tested up to: 8.0
+Stable tag: 1.0.3
 Requires PHP: 5.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/copyleft/gpl-3.0.html
@@ -22,6 +22,10 @@ Head over to the [UCF RSS Feed Plugin wiki](https://github.com/UCF/UCF-RSS-Feed-
 
 
 == Changelog ==
+
+= 1.0.3 =
+Bug Fixes:
+* Corrected a bug where the cache_expiration option would be returned as an empty string, causing an invalid string to integer operation to occur when the conversion from hours to seconds was calculated.
 
 = 1.0.2 =
 Enhancements:
