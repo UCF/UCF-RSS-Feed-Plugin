@@ -157,7 +157,8 @@ if ( !class_exists( 'UCF_RSS_Config' ) ) {
 					'sc_attr'         => false,
 					'field_title'     => 'Cache Expiration',
 					'field_desc'      => 'Length of time, in hours, that feed data should be cached before fresh results are fetched.',
-					'field_type'      => 'number'
+					'field_type'      => 'number',
+					'field_options_section' => 'ucf_rss_section_general'
 				) ),
 			);
 
@@ -480,7 +481,11 @@ if ( !class_exists( 'UCF_RSS_Config' ) ) {
 			$option                = self::get_option( $option_name_no_prefix );
 
 			if ( $option ) {
-				return get_option( $option_name, $option->get_default() );
+				$retval = get_option( $option_name, $option->get_default() );
+				if ( $option->field_type === 'number' && gettype( $retval ) === 'string' ) {
+					return intval( $retval );
+				}
+				return $retval;
 			}
 			else {
 				return get_option( $option_name );
