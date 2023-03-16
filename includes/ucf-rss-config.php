@@ -480,7 +480,7 @@ if ( !class_exists( 'UCF_RSS_Config' ) ) {
 			$option                = self::get_option( $option_name_no_prefix );
 
 			if ( $option ) {
-				return get_option( $option_name, $option->get_default() );
+				return $option->default;
 			}
 			else {
 				return get_option( $option_name );
