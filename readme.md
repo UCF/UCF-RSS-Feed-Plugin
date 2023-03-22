@@ -15,6 +15,10 @@ Head over to the [UCF RSS Feed Plugin wiki](https://github.com/UCF/UCF-RSS-Feed-
 
 ## Changelog ##
 
+# 1.0.4 #
+Enhancements:
+- Added composer file.
+
 ### 1.0.3 ###
 Bug Fixes:
 - Corrected a bug where the cache_expiration option would be returned as an empty string, causing an invalid string to integer operation to occur when the conversion from hours to seconds was calculated.

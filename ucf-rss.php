@@ -2,7 +2,7 @@
 /*
 Plugin Name: UCF RSS Feed Plugin
 Description: Contains shortcode for displaying RSS feed data in posts.
-Version: 1.0.3
+Version: 1.0.4
 Author: UCF Web Communications
 License: GPL3
 */
